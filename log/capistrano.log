@@ -1115,3 +1115,208 @@ Entrypoints:
  DEBUG [6dc1ae36] Command: cd /home/deploy/piped/releases && /usr/bin/env echo "Branch local (at 5c007bf63d795a94d6004a1f5fdc96c919501433) deployed as release 20211023233549 by karlis" >> /home/deploy/piped/revisions.log
  DEBUG [6dc1ae36] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
   INFO [6dc1ae36] Finished in 0.323 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-10-24 03:07:08 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [12d7d853] Running /usr/bin/env mkdir -p /tmp on piped-deploy
+ DEBUG [12d7d853] Command: /usr/bin/env mkdir -p /tmp
+ DEBUG [12d7d853] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+  INFO [12d7d853] Finished in 1.478 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-83878132b15f2cffa777.sh 0.0%
+  INFO Uploading /tmp/git-ssh-83878132b15f2cffa777.sh 100.0%
+  INFO [ec1e91dd] Running /usr/bin/env chmod 700 /tmp/git-ssh-83878132b15f2cffa777.sh on piped-deploy
+ DEBUG [ec1e91dd] Command: /usr/bin/env chmod 700 /tmp/git-ssh-83878132b15f2cffa777.sh
+ DEBUG [ec1e91dd] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+  INFO [ec1e91dd] Finished in 0.319 seconds with exit status 0 (successful).
+  INFO [f41f316d] Running /usr/bin/env git ls-remote git@github.com:IvRRimum/Piped.git HEAD on piped-deploy
+ DEBUG [f41f316d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-83878132b15f2cffa777.sh" ; /usr/bin/env git ls-remote git@github.com:IvRRimum/Piped.git HEAD )
+ DEBUG [f41f316d] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [f41f316d] 	ed35546f75f7749bcda210b87fb813da4bad9743	HEAD
+  INFO [f41f316d] Finished in 1.582 seconds with exit status 0 (successful).
+  INFO [ede2adf1] Running /usr/bin/env mkdir -p /home/deploy/piped/shared /home/deploy/piped/releases on piped-deploy
+ DEBUG [ede2adf1] Command: /usr/bin/env mkdir -p /home/deploy/piped/shared /home/deploy/piped/releases
+ DEBUG [ede2adf1] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+  INFO [ede2adf1] Finished in 0.408 seconds with exit status 0 (successful).
+  INFO [edf158b9] Running /usr/bin/env mkdir -p /home/deploy/piped/shared/log /home/deploy/piped/shared/node_modules on piped-deploy
+ DEBUG [edf158b9] Command: /usr/bin/env mkdir -p /home/deploy/piped/shared/log /home/deploy/piped/shared/node_modules
+ DEBUG [edf158b9] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+  INFO [edf158b9] Finished in 0.511 seconds with exit status 0 (successful).
+ DEBUG [82e9c1b8] Running [ -f /home/deploy/piped/current/REVISION ] on piped-deploy
+ DEBUG [82e9c1b8] Command: [ -f /home/deploy/piped/current/REVISION ]
+ DEBUG [82e9c1b8] 	manpath: 
+ DEBUG [82e9c1b8] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [82e9c1b8] 	
+ DEBUG [82e9c1b8] Finished in 0.408 seconds with exit status 0 (successful).
+ DEBUG [ba5f71d4] Running /usr/bin/env cat /home/deploy/piped/current/REVISION 2>/dev/null on piped-deploy
+ DEBUG [ba5f71d4] Command: /usr/bin/env cat /home/deploy/piped/current/REVISION 2>/dev/null
+ DEBUG [ba5f71d4] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [ba5f71d4] 	5c007bf63d795a94d6004a1f5fdc96c919501433
+ DEBUG [ba5f71d4] Finished in 0.365 seconds with exit status 0 (successful).
+ DEBUG [79237641] Running [ -f /home/deploy/piped/repo/HEAD ] on piped-deploy
+ DEBUG [79237641] Command: [ -f /home/deploy/piped/repo/HEAD ]
+ DEBUG [79237641] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [79237641] Finished in 0.314 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/piped/repo
+ DEBUG [809265fd] Running if test ! -d /home/deploy/piped/repo; then echo "Directory does not exist '/home/deploy/piped/repo'" 1>&2; false; fi on piped-deploy
+ DEBUG [809265fd] Command: if test ! -d /home/deploy/piped/repo; then echo "Directory does not exist '/home/deploy/piped/repo'" 1>&2; false; fi
+ DEBUG [809265fd] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [809265fd] Finished in 0.363 seconds with exit status 0 (successful).
+  INFO [4907293b] Running /usr/bin/env git remote set-url origin git@github.com:IvRRimum/Piped.git on piped-deploy
+ DEBUG [4907293b] Command: cd /home/deploy/piped/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-83878132b15f2cffa777.sh" ; /usr/bin/env git remote set-url origin git@github.com:IvRRimum/Piped.git )
+ DEBUG [4907293b] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+  INFO [4907293b] Finished in 0.387 seconds with exit status 0 (successful).
+  INFO [060d31a1] Running /usr/bin/env git remote update --prune on piped-deploy
+ DEBUG [060d31a1] Command: cd /home/deploy/piped/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-83878132b15f2cffa777.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [060d31a1] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [060d31a1] 	Fetching origin
+ DEBUG [060d31a1] 	From github.com:IvRRimum/Piped
+ DEBUG [060d31a1] 	   5c007bf..ec5cf89  local      -> local
+ DEBUG [060d31a1] 	   2d3c397..1abff3e  ui-v2      -> ui-v2
+  INFO [060d31a1] Finished in 1.713 seconds with exit status 0 (successful).
+ DEBUG [d9e101f9] Running if test ! -d /home/deploy/piped/repo; then echo "Directory does not exist '/home/deploy/piped/repo'" 1>&2; false; fi on piped-deploy
+ DEBUG [d9e101f9] Command: if test ! -d /home/deploy/piped/repo; then echo "Directory does not exist '/home/deploy/piped/repo'" 1>&2; false; fi
+ DEBUG [d9e101f9] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [d9e101f9] Finished in 0.337 seconds with exit status 0 (successful).
+  INFO [947a395f] Running /usr/bin/env mkdir -p /home/deploy/piped/releases/20211024000713 on piped-deploy
+ DEBUG [947a395f] Command: cd /home/deploy/piped/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-83878132b15f2cffa777.sh" ; /usr/bin/env mkdir -p /home/deploy/piped/releases/20211024000713 )
+ DEBUG [947a395f] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+  INFO [947a395f] Finished in 0.405 seconds with exit status 0 (successful).
+  INFO [13119385] Running /usr/bin/env git archive local | /usr/bin/env tar -x -f - -C /home/deploy/piped/releases/20211024000713 on piped-deploy
+ DEBUG [13119385] Command: cd /home/deploy/piped/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-83878132b15f2cffa777.sh" ; /usr/bin/env git archive local | /usr/bin/env tar -x -f - -C /home/deploy/piped/releases/20211024000713 )
+ DEBUG [13119385] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+  INFO [13119385] Finished in 0.377 seconds with exit status 0 (successful).
+ DEBUG [a62a7c11] Running if test ! -d /home/deploy/piped/repo; then echo "Directory does not exist '/home/deploy/piped/repo'" 1>&2; false; fi on piped-deploy
+ DEBUG [a62a7c11] Command: if test ! -d /home/deploy/piped/repo; then echo "Directory does not exist '/home/deploy/piped/repo'" 1>&2; false; fi
+ DEBUG [a62a7c11] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [a62a7c11] Finished in 0.388 seconds with exit status 0 (successful).
+ DEBUG [0f467110] Running /usr/bin/env git rev-list --max-count=1 local on piped-deploy
+ DEBUG [0f467110] Command: cd /home/deploy/piped/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-83878132b15f2cffa777.sh" ; /usr/bin/env git rev-list --max-count=1 local )
+ DEBUG [0f467110] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [0f467110] 	ec5cf8903072de513dd05538db2d5a30dc4cd972
+ DEBUG [0f467110] Finished in 0.360 seconds with exit status 0 (successful).
+ DEBUG [2b476ac7] Running if test ! -d /home/deploy/piped/releases/20211024000713; then echo "Directory does not exist '/home/deploy/piped/releases/20211024000713'" 1>&2; false; fi on piped-deploy
+ DEBUG [2b476ac7] Command: if test ! -d /home/deploy/piped/releases/20211024000713; then echo "Directory does not exist '/home/deploy/piped/releases/20211024000713'" 1>&2; false; fi
+ DEBUG [2b476ac7] 	manpath: 
+ DEBUG [2b476ac7] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [2b476ac7] 	
+ DEBUG [2b476ac7] Finished in 0.409 seconds with exit status 0 (successful).
+  INFO [f81862eb] Running /usr/bin/env echo "ec5cf8903072de513dd05538db2d5a30dc4cd972" > REVISION on piped-deploy
+ DEBUG [f81862eb] Command: cd /home/deploy/piped/releases/20211024000713 && /usr/bin/env echo "ec5cf8903072de513dd05538db2d5a30dc4cd972" > REVISION
+ DEBUG [f81862eb] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+  INFO [f81862eb] Finished in 0.389 seconds with exit status 0 (successful).
+  INFO [af44a470] Running /usr/bin/env mkdir -p /home/deploy/piped/releases/20211024000713 on piped-deploy
+ DEBUG [af44a470] Command: /usr/bin/env mkdir -p /home/deploy/piped/releases/20211024000713
+ DEBUG [af44a470] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+  INFO [af44a470] Finished in 0.386 seconds with exit status 0 (successful).
+ DEBUG [c078c90c] Running [ -L /home/deploy/piped/releases/20211024000713/log ] on piped-deploy
+ DEBUG [c078c90c] Command: [ -L /home/deploy/piped/releases/20211024000713/log ]
+ DEBUG [c078c90c] 	manpath: can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [c078c90c] Finished in 0.350 seconds with exit status 1 (failed).
+ DEBUG [e95aa87d] Running [ -d /home/deploy/piped/releases/20211024000713/log ] on piped-deploy
+ DEBUG [e95aa87d] Command: [ -d /home/deploy/piped/releases/20211024000713/log ]
+ DEBUG [e95aa87d] 	manpath: 
+ DEBUG [e95aa87d] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [e95aa87d] 	
+ DEBUG [e95aa87d] Finished in 0.408 seconds with exit status 0 (successful).
+  INFO [c7610246] Running /usr/bin/env rm -rf /home/deploy/piped/releases/20211024000713/log on piped-deploy
+ DEBUG [c7610246] Command: /usr/bin/env rm -rf /home/deploy/piped/releases/20211024000713/log
+ DEBUG [c7610246] 	manpath: 
+ DEBUG [c7610246] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [c7610246] 	
+  INFO [c7610246] Finished in 0.318 seconds with exit status 0 (successful).
+  INFO [496a50a6] Running /usr/bin/env ln -s /home/deploy/piped/shared/log /home/deploy/piped/releases/20211024000713/log on piped-deploy
+ DEBUG [496a50a6] Command: /usr/bin/env ln -s /home/deploy/piped/shared/log /home/deploy/piped/releases/20211024000713/log
+ DEBUG [496a50a6] 	manpath: 
+ DEBUG [496a50a6] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [496a50a6] 	
+  INFO [496a50a6] Finished in 0.374 seconds with exit status 0 (successful).
+ DEBUG [5f95e127] Running [ -L /home/deploy/piped/releases/20211024000713/node_modules ] on piped-deploy
+ DEBUG [5f95e127] Command: [ -L /home/deploy/piped/releases/20211024000713/node_modules ]
+ DEBUG [5f95e127] 	manpath: 
+ DEBUG [5f95e127] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [5f95e127] 	
+ DEBUG [5f95e127] Finished in 0.340 seconds with exit status 1 (failed).
+ DEBUG [c4d0d686] Running [ -d /home/deploy/piped/releases/20211024000713/node_modules ] on piped-deploy
+ DEBUG [c4d0d686] Command: [ -d /home/deploy/piped/releases/20211024000713/node_modules ]
+ DEBUG [c4d0d686] 	manpath: 
+ DEBUG [c4d0d686] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [c4d0d686] 	
+ DEBUG [c4d0d686] Finished in 0.365 seconds with exit status 1 (failed).
+  INFO [977dbdc7] Running /usr/bin/env ln -s /home/deploy/piped/shared/node_modules /home/deploy/piped/releases/20211024000713/node_modules on piped-deploy
+ DEBUG [977dbdc7] Command: /usr/bin/env ln -s /home/deploy/piped/shared/node_modules /home/deploy/piped/releases/20211024000713/node_modules
+ DEBUG [977dbdc7] 	manpath: 
+ DEBUG [977dbdc7] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [977dbdc7] 	
+  INFO [977dbdc7] Finished in 0.320 seconds with exit status 0 (successful).
+  INFO [5d7df4ef] Running /usr/bin/env ln -s /home/deploy/piped/releases/20211024000713 /home/deploy/piped/releases/current on piped-deploy
+ DEBUG [5d7df4ef] Command: /usr/bin/env ln -s /home/deploy/piped/releases/20211024000713 /home/deploy/piped/releases/current
+ DEBUG [5d7df4ef] 	manpath: 
+ DEBUG [5d7df4ef] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [5d7df4ef] 	
+  INFO [5d7df4ef] Finished in 0.370 seconds with exit status 0 (successful).
+  INFO [243df088] Running /usr/bin/env mv /home/deploy/piped/releases/current /home/deploy/piped on piped-deploy
+ DEBUG [243df088] Command: /usr/bin/env mv /home/deploy/piped/releases/current /home/deploy/piped
+ DEBUG [243df088] 	manpath: 
+ DEBUG [243df088] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [243df088] 	
+  INFO [243df088] Finished in 0.366 seconds with exit status 0 (successful).
+ DEBUG [e9e94f44] Running /usr/bin/env ls -x /home/deploy/piped/releases on piped-deploy
+ DEBUG [e9e94f44] Command: /usr/bin/env ls -x /home/deploy/piped/releases
+ DEBUG [e9e94f44] 	manpath: 
+ DEBUG [e9e94f44] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [e9e94f44] 	
+ DEBUG [e9e94f44] 	20211017164607	20211023231109	20211023232551	20211023233359	20211023233549
+20211024000713
+ DEBUG [e9e94f44] Finished in 0.408 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on piped-deploy
+ DEBUG [e58ed59f] Running [ -d /home/deploy/piped/current ] on piped-deploy
+ DEBUG [e58ed59f] Command: [ -d /home/deploy/piped/current ]
+ DEBUG [e58ed59f] 	manpath: 
+ DEBUG [e58ed59f] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [e58ed59f] 	
+ DEBUG [e58ed59f] Finished in 0.325 seconds with exit status 0 (successful).
+ DEBUG [3e7cd963] Running /usr/bin/env readlink /home/deploy/piped/current on piped-deploy
+ DEBUG [3e7cd963] Command: /usr/bin/env readlink /home/deploy/piped/current
+ DEBUG [3e7cd963] 	manpath: 
+ DEBUG [3e7cd963] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [3e7cd963] 	
+ DEBUG [3e7cd963] 	/home/deploy/piped/releases/20211024000713
+ DEBUG [3e7cd963] Finished in 0.369 seconds with exit status 0 (successful).
+  INFO [f9a4b616] Running /usr/bin/env rm -rf /home/deploy/piped/releases/20211017164607 on piped-deploy
+ DEBUG [f9a4b616] Command: /usr/bin/env rm -rf /home/deploy/piped/releases/20211017164607
+ DEBUG [f9a4b616] 	manpath: 
+ DEBUG [f9a4b616] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [f9a4b616] 	
+  INFO [f9a4b616] Finished in 0.331 seconds with exit status 0 (successful).
+  INFO [29f36ee2] Running cd /home/deploy/piped/releases/20211024000713 && yarn install && yarn build on piped-deploy
+ DEBUG [29f36ee2] Command: cd /home/deploy/piped/releases/20211024000713 && yarn install && yarn build
+ DEBUG [29f36ee2] 	manpath: 
+ DEBUG [29f36ee2] 	can't set the locale; make sure $LC_* and $LANG are correct
+ DEBUG [29f36ee2] 	
+ DEBUG [29f36ee2] 	yarn install v1.22.10
+ DEBUG [29f36ee2] 	[1/4] Resolving packages...
+ DEBUG [29f36ee2] 	success Already up-to-date.
+ DEBUG [29f36ee2] 	Done in 0.66s.
+ DEBUG [29f36ee2] 	yarn run v1.22.10
+ DEBUG [29f36ee2] 	$ vue-cli-service build
+ DEBUG [29f36ee2] 	
+ DEBUG [29f36ee2] 	-  Building for production...
+ DEBUG [29f36ee2] 	 ERROR  Failed to compile with 1 error12:07:39 AM
+ DEBUG [29f36ee2] 	
+ DEBUG [29f36ee2] 	 error  in ./src/App.vue
+ DEBUG [29f36ee2] 	
+ DEBUG [29f36ee2] 	Module Error (from /home/deploy/piped/shared/node_modules/eslint-loader/index.js):
+
+/home/deploy/piped/releases/20211024000713/src/App.vue
+  29:19  error  Replace `·href="https://github.com/TeamPiped/Piped#donations"·:aria-label="$t('actions.donations')"·title="$t('actions.donations')"` with `⏎····················href="https://github.com/TeamPiped/Piped#donations"⏎····················:aria-label="$t('actions.donations')"⏎····················title="$t('actions.donations')"⏎················`  prettier/prettier
+
+✖ 1 problem (1 error, 0 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+
+
+ @ ./src/main.js 10:0-28 247:22-25
+ @ multi ./src/main.js
+ DEBUG [29f36ee2] 	
+ DEBUG [29f36ee2] 	 ERROR  Build failed with errors.
+ DEBUG [29f36ee2] 	error Command failed with exit code 1.
+ DEBUG [29f36ee2] 	info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
