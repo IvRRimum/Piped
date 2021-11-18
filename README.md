@@ -1,5 +1,7 @@
 # Piped
 
+Auto update backend with: `docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once piped-api_piped_1`
+
 [![Matrix](https://img.shields.io/matrix/piped:matrix.org)](https://matrix.to/#/#piped:matrix.org)
 [![IPFS Build](https://github.com/TeamPiped/Piped/actions/workflows/build.yml/badge.svg)](https://piped-ipfs.kavin.rocks/)
 [![GitHub Repo stars](https://img.shields.io/github/stars/TeamPiped/Piped-Frontend?style=social)](https://github.com/TeamPiped/Piped/stargazers)
